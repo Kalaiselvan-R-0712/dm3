@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>STACKLY – Digital Marketing Agency</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#0b1f1b] text-white selection:bg-[#f7d67b] selection:text-black overflow-x-hidden">
+
+<!-- NAVBAR -->
+<header class="fixed top-0 left-0 w-full z-50 bg-[#f7d67b]/90 md:backdrop-blur">
+  <div class="h-[80px] max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between">
+    
+    <div class="flex items-center gap-3">
+      <img src="assets/images/logo/stackly_logo.webp" class="h-8">
+    </div>
+
+    <nav class="hidden md:flex gap-8 font-medium text-black">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Pages</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <button class="hidden md:flex bg-[#2f6f64] text-white px-6 py-3 rounded-xl items-center gap-2">
+      Login / Register ↗
+    </button>
+
+    <button id="menuBtn" class="md:hidden text-black text-2xl">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="mobileMenu" class="fixed inset-0 bg-[#0b1f1b] z-[999] hidden overflow-y-auto">
+  <div class="flex flex-col min-h-screen p-6">
+
+    <div class="flex justify-between items-center mb-10">
+      <img src="assets/images/logo/stackly_logo.webp" class="h-8">
+      <button id="closeMenu" class="text-white text-3xl">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <nav class="flex flex-col gap-6 text-2xl font-semibold">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Pages</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <div class="flex-grow"></div>
+
+    <button class="bg-[#2f6f64] w-full py-4 rounded-xl text-lg font-semibold mt-10">
+      Login / Register →
+    </button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="relative pt-[80px] min-h-[calc(100vh-80px)]">
+  <div class="absolute inset-0 bg-gradient-to-br from-[#0f2a25] to-[#081917]"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 py-24 md:py-28 grid md:grid-cols-2 gap-20 items-center">
+
+    <div>
+      <span class="inline-block bg-[#1f3b35]/80 text-[#f7d67b] px-4 py-2 rounded-full text-sm mb-6">
+        Digital Marketing Agency
+      </span>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+        Digital Marketing<br>
+        That Grows Your<br>
+        Business
+      </h1>
+
+      <p class="text-gray-300 max-w-lg mb-10 text-lg">
+        We help brands scale with data-driven SEO, paid campaigns,
+        conversion optimization and performance marketing.
+      </p>
+
+      <div class="flex gap-4">
+        <button class="bg-[#2f6f64] px-8 py-4 rounded-xl font-semibold">
+          Free Consultation →
+        </button>
+        <button class="border border-white/20 px-8 py-4 rounded-xl">
+          Watch Demo
+        </button>
+      </div>
+    </div>
+
+    <div class="relative">
+      <img src="https://picsum.photos/600/600?people" 
+           class="rounded-[32px] w-full h-[420px] md:h-[520px] object-cover">
+      <div class="absolute -bottom-6 -left-6 bg-[#2f6f64] px-6 py-3 rounded-xl">
+        <p class="text-sm">500+ Clients Worldwide</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="relative py-32">
+  <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-24 items-center">
+    <div>
+      <img 
+        src="https://picsum.photos/600/500?team" 
+        class="rounded-[32px] w-full h-[460px] object-cover shadow-[0_30px_80px_rgba(0,0,0,0.6)]"
+      >
+    </div>
+
+    <div>
+      <span class="inline-block bg-[#1f3b35]/80 text-[#f7d67b] px-4 py-2 rounded-full text-sm mb-6">
+        About Stackly
+      </span>
+
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">
+        Save Time & Money<br>
+        With Smart Marketing
+      </h2>
+
+      <p class="text-gray-300 mb-10 text-lg">
+        Our team builds scalable growth systems using automation,
+        analytics, creative strategy and high-converting funnels.
+      </p>
+
+      <div class="space-y-6">
+        <div class="flex gap-4">
+          <div class="bg-[#f7d67b] text-black w-12 h-12 rounded-xl flex items-center justify-center font-bold">
+            $
+          </div>
+          <div>
+            <h4 class="font-semibold text-lg">Experience & Expertise</h4>
+            <p class="text-gray-400 text-sm">
+              10+ years helping brands dominate digital.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="bg-[#f7d67b] text-black w-12 h-12 rounded-xl flex items-center justify-center font-bold">
+            ⚡
+          </div>
+          <div>
+            <h4 class="font-semibold text-lg">Customized Solutions</h4>
+            <p class="text-gray-400 text-sm">
+              Tailored strategies for every business.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <button class="mt-10 bg-[#2f6f64] px-8 py-4 rounded-xl font-semibold hover:scale-105 transition">
+        More About Us →
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="py-32">
+  <div class="max-w-7xl mx-auto px-8">
+    <h2 class="text-4xl md:text-5xl font-bold text-center mb-20">
+      Our Core Services
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-10">
+      <div class="group relative rounded-2xl overflow-hidden">
+        <img src="https://picsum.photos/500/400?marketing" class="w-full h-[300px] object-cover group-hover:scale-110 transition duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+        <div class="absolute bottom-6 left-6">
+          <h3 class="text-xl font-semibold">Marketing Strategy</h3>
+          <p class="text-gray-300 text-sm">Growth Planning</p>
+        </div>
+      </div>
+
+      <div class="group relative rounded-2xl overflow-hidden">
+        <img src="https://picsum.photos/500/400?code" class="w-full h-[300px] object-cover group-hover:scale-110 transition duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+        <div class="absolute bottom-6 left-6">
+          <h3 class="text-xl font-semibold">Web Development</h3>
+          <p class="text-gray-300 text-sm">High Performance Sites</p>
+        </div>
+      </div>
+
+      <div class="group relative rounded-2xl overflow-hidden">
+        <img src="https://picsum.photos/500/400?analysis" class="w-full h-[300px] object-cover group-hover:scale-110 transition duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+        <div class="absolute bottom-6 left-6">
+          <h3 class="text-xl font-semibold">Marketing Analytics</h3>
+          <p class="text-gray-300 text-sm">Data Driven Decisions</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="bg-[#f7d67b] text-black py-16">
+  <div class="max-w-7xl mx-auto px-8 grid grid-cols-2 md:grid-cols-5 text-center gap-6">
+    <div><h3 class="text-3xl font-bold">2425+</h3><p>Projects</p></div>
+    <div><h3 class="text-3xl font-bold">98%</h3><p>Satisfaction</p></div>
+    <div><h3 class="text-3xl font-bold">99%</h3><p>Conversion</p></div>
+    <div><h3 class="text-3xl font-bold">67+</h3><p>Awards</p></div>
+    <div><h3 class="text-3xl font-bold">23+</h3><p>Countries</p></div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US - ADVANCED -->
+<section class="relative bg-[#0b1f1b] py-32 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-24 items-center relative z-10">
+
+    <!-- LEFT CONTENT -->
+    <div>
+      <span class="inline-block bg-[#1f3b35]/80 text-[#f7d67b] px-4 py-2 rounded-full text-sm mb-6">
+        Why Choose Stackly
+      </span>
+
+      <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+        We Help Your Business To <br>
+        Grow Up More Stronger
+      </h2>
+
+      <p class="text-gray-300 mb-10 max-w-lg">
+        Digital marketing agencies often run paid advertising campaigns for themselves.
+        This includes creating compelling.
+      </p>
+
+      <!-- FLOATING AWARD CARD -->
+      <div class="bg-[#2f6f64] rounded-2xl p-6 shadow-[0_20px_60px_rgba(0,0,0,0.6)] max-w-xl">
+        <div class="grid grid-cols-2 gap-6 mb-6">
+          <div class="flex gap-3 items-center">
+            <div class="bg-[#f7d67b] text-black w-10 h-10 rounded-xl flex items-center justify-center">🏆</div>
+            <div>
+              <h4 class="font-semibold text-sm">World Marketing Winning</h4>
+              <p class="text-xs text-gray-200">Awards 2023</p>
+            </div>
+          </div>
+          <div class="flex gap-3 items-center">
+            <div class="bg-[#f7d67b] text-black w-10 h-10 rounded-xl flex items-center justify-center">🏆</div>
+            <div>
+              <h4 class="font-semibold text-sm">World Marketing Winning</h4>
+              <p class="text-xs text-gray-200">Awards 2023</p>
+            </div>
+          </div>
+        </div>
+
+        <ul class="space-y-3 text-sm text-gray-200">
+          <li class="flex gap-2">
+            <span class="text-[#f7d67b]">✔</span>
+            Allow customers to choose from various payment methods and flexible billing.
+          </li>
+          <li class="flex gap-2">
+            <span class="text-[#f7d67b]">✔</span>
+            Deliver excellent customer service across digital and physical channels.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="relative">
+      <!-- dotted pattern -->
+      <div class="absolute top-10 left-10 grid grid-cols-6 gap-2 opacity-20">
+        <span class="w-1 h-1 bg-white rounded-full"></span>
+        <span class="w-1 h-1 bg-white rounded-full"></span>
+        <span class="w-1 h-1 bg-white rounded-full"></span>
+        <span class="w-1 h-1 bg-white rounded-full"></span>
+        <span class="w-1 h-1 bg-white rounded-full"></span>
+        <span class="w-1 h-1 bg-white rounded-full"></span>
+      </div>
+
+      <img 
+        src="https://picsum.photos/700/500?office" 
+        class="rounded-[36px] w-full h-[480px] object-cover shadow-[0_40px_100px_rgba(0,0,0,0.7)]"
+      >
+    </div>
+
+  </div>
+
+  <!-- background decorative lines -->
+  <div class="absolute left-0 top-1/2 -translate-y-1/2 opacity-10">
+    <div class="w-40 h-[2px] bg-white mb-2"></div>
+    <div class="w-32 h-[2px] bg-white mb-2"></div>
+    <div class="w-24 h-[2px] bg-white"></div>
+  </div>
+</section>
+
+<!-- PROJECTS / CASE STUDIES -->
+<section class="bg-[#0b1f1b] py-32">
+  <div class="max-w-7xl mx-auto px-8">
+
+    <!-- Section Badge -->
+    <div class="text-center mb-6">
+      <span class="inline-block bg-[#1f3b35]/80 text-[#f7d67b] px-4 py-2 rounded-full text-sm">
+        View Our Latest Project
+      </span>
+    </div>
+
+    <!-- Heading -->
+    <h2 class="text-4xl md:text-5xl font-bold text-center mb-20">
+      Our Latest Case Studies For <br>
+      Our Marketing Clients
+    </h2>
+
+    <!-- Projects Grid -->
+    <div class="grid md:grid-cols-2 gap-10">
+
+      <!-- Project Card 1 -->
+      <div class="relative group rounded-[28px] overflow-hidden">
+        <img src="https://picsum.photos/700/500?1" 
+             class="w-full h-[360px] object-cover group-hover:scale-110 transition duration-700">
+        <div class="absolute inset-0 bg-black/20"></div>
+
+        <!-- Floating Info -->
+        <div class="absolute bottom-4 left-4 right-4 bg-[#2f6f64] rounded-xl p-4 backdrop-blur shadow-xl">
+          <div class="flex justify-between text-sm text-gray-200">
+            <span>Client<br><b>John Doe</b></span>
+            <span>Category<br><b>Develop</b></span>
+          </div>
+          <h4 class="text-lg font-semibold mt-2">Web Development</h4>
+        </div>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div class="relative group rounded-[28px] overflow-hidden">
+        <img src="https://picsum.photos/700/500?2" 
+             class="w-full h-[360px] object-cover group-hover:scale-110 transition duration-700">
+        <div class="absolute inset-0 bg-black/20"></div>
+
+        <div class="absolute bottom-4 left-4 right-4 bg-[#2f6f64] rounded-xl p-4 backdrop-blur shadow-xl">
+          <div class="flex justify-between text-sm text-gray-200">
+            <span>Client<br><b>John Doe</b></span>
+            <span>Category<br><b>Develop</b></span>
+          </div>
+          <h4 class="text-lg font-semibold mt-2">Web Development</h4>
+        </div>
+      </div>
+
+      <!-- Project Card 3 -->
+      <div class="relative group rounded-[28px] overflow-hidden">
+        <img src="https://picsum.photos/700/500?3" 
+             class="w-full h-[360px] object-cover group-hover:scale-110 transition duration-700">
+        <div class="absolute inset-0 bg-black/20"></div>
+
+        <div class="absolute bottom-4 left-4 right-4 bg-[#2f6f64] rounded-xl p-4 backdrop-blur shadow-xl">
+          <div class="flex justify-between text-sm text-gray-200">
+            <span>Client<br><b>John Doe</b></span>
+            <span>Category<br><b>Develop</b></span>
+          </div>
+          <h4 class="text-lg font-semibold mt-2">Web Development</h4>
+        </div>
+      </div>
+
+      <!-- Project Card 4 -->
+      <div class="relative group rounded-[28px] overflow-hidden">
+        <img src="https://picsum.photos/700/500?4" 
+             class="w-full h-[360px] object-cover group-hover:scale-110 transition duration-700">
+        <div class="absolute inset-0 bg-black/20"></div>
+
+        <div class="absolute bottom-4 left-4 right-4 bg-[#2f6f64] rounded-xl p-4 backdrop-blur shadow-xl">
+          <div class="flex justify-between text-sm text-gray-200">
+            <span>Client<br><b>John Doe</b></span>
+            <span>Category<br><b>Develop</b></span>
+          </div>
+          <h4 class="text-lg font-semibold mt-2">Web Development</h4>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="bg-[#0b1f1b] py-32">
+  <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-24 items-center">
+
+    <!-- LEFT PROCESS CARDS -->
+    <div class="space-y-6">
+
+      <!-- Card 1 -->
+      <div class="bg-[#142e29] rounded-2xl p-6 hover:bg-[#1b3b35] transition">
+        <span class="text-[#f7d67b] font-bold">01</span>
+        <h4 class="text-xl font-semibold mt-2">Strategy</h4>
+        <p class="text-gray-300 text-sm mt-2">
+          Based on the insights gathered, we develop a comprehensive SEO strategy
+          tailored to your business objectives.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-[#142e29] rounded-2xl p-6 hover:bg-[#1b3b35] transition">
+        <span class="text-[#f7d67b] font-bold">02</span>
+        <h4 class="text-xl font-semibold mt-2">Process</h4>
+        <p class="text-gray-300 text-sm mt-2">
+          We analyze competitors, audience behavior, and market trends
+          to build a growth roadmap.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-[#142e29] rounded-2xl p-6 hover:bg-[#1b3b35] transition">
+        <span class="text-[#f7d67b] font-bold">03</span>
+        <h4 class="text-xl font-semibold mt-2">Implement</h4>
+        <p class="text-gray-300 text-sm mt-2">
+          Our team executes strategies with continuous optimization
+          and performance tracking.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div>
+      <span class="inline-block bg-[#1f3b35]/80 text-[#f7d67b] px-4 py-2 rounded-full text-sm mb-6">
+        How It Work
+      </span>
+
+      <h2 class="text-4xl md:text-5xl font-bold leading-tight mb-8">
+        How Stackly Is Work Process <br>
+        For Our Marketing Customer
+      </h2>
+
+      <img 
+        src="https://picsum.photos/700/500?team" 
+        class="rounded-[36px] w-full h-[420px] object-cover shadow-[0_40px_100px_rgba(0,0,0,0.7)]"
+      >
+    </div>
+
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="bg-[#0b1f1b] py-32">
+  <div class="max-w-7xl mx-auto px-8">
+
+    <!-- Top Row -->
+    <div class="grid md:grid-cols-2 gap-16 mb-20 items-center">
+      <div>
+        <span class="inline-block bg-[#1f3b35]/80 text-[#f7d67b] px-4 py-2 rounded-full text-sm mb-4">
+          View Plan
+        </span>
+
+        <h2 class="text-4xl md:text-5xl font-bold leading-tight">
+          View Our Pricing Plan And <br>
+          Start Your Project
+        </h2>
+      </div>
+
+      <div class="text-gray-300 text-sm">
+        <p>
+          Digital marketing agencies often run paid advertising campaigns for themselves.
+          This includes creating compelling.
+        </p>
+      </div>
+    </div>
+
+    <!-- Pricing Cards -->
+    <div class="grid md:grid-cols-3 gap-10">
+
+      <!-- Basic -->
+      <div class="bg-[#142e29] rounded-2xl p-8 hover:scale-105 transition">
+        <h3 class="text-xl font-semibold mb-2">Basic Plan</h3>
+        <p class="text-gray-400 text-sm mb-6">
+          Work closely with clients to understand goals.
+        </p>
+
+        <h4 class="text-4xl font-bold text-[#f7d67b] mb-6">
+          $90 <span class="text-sm text-gray-400">/Month</span>
+        </h4>
+
+        <button class="w-full bg-[#2f6f64] py-3 rounded-xl mb-6 hover:bg-[#3b8577] transition">
+          Get Started Now ↗
+        </button>
+
+        <ul class="space-y-3 text-sm text-gray-300">
+          <li>✔ Community support system</li>
+          <li>✔ Unlimited Social Media</li>
+          <li>✔ SEO management</li>
+          <li>✔ Web Design & Development</li>
+          <li>✔ Email & phone support</li>
+        </ul>
+      </div>
+
+      <!-- Business (Featured) -->
+      <div class="bg-[#2f6f64] rounded-2xl p-10 scale-105 shadow-[0_30px_80px_rgba(0,0,0,0.6)]">
+        <h3 class="text-xl font-semibold mb-2">Business Plan</h3>
+        <p class="text-gray-200 text-sm mb-6">
+          Best for growing companies.
+        </p>
+
+        <h4 class="text-4xl font-bold text-[#f7d67b] mb-6">
+          $100 <span class="text-sm text-gray-200">/Month</span>
+        </h4>
+
+        <button class="w-full bg-[#f7d67b] text-black py-3 rounded-xl mb-6 font-semibold hover:scale-105 transition">
+          Purchase Now ↗
+        </button>
+
+        <ul class="space-y-3 text-sm text-gray-100">
+          <li>✔ Community support system</li>
+          <li>✔ Unlimited Social Media</li>
+          <li>✔ SEO management</li>
+          <li>✔ Web Design & Development</li>
+          <li>✔ Priority support</li>
+        </ul>
+      </div>
+
+      <!-- Premium -->
+      <div class="bg-[#142e29] rounded-2xl p-8 hover:scale-105 transition">
+        <h3 class="text-xl font-semibold mb-2">Premium Plan</h3>
+        <p class="text-gray-400 text-sm mb-6">
+          Enterprise level solution.
+        </p>
+
+        <h4 class="text-4xl font-bold text-[#f7d67b] mb-6">
+          $187 <span class="text-sm text-gray-400">/Month</span>
+        </h4>
+
+        <button class="w-full bg-[#2f6f64] py-3 rounded-xl mb-6 hover:bg-[#3b8577] transition">
+          Purchase Now ↗
+        </button>
+
+        <ul class="space-y-3 text-sm text-gray-300">
+          <li>✔ Community support system</li>
+          <li>✔ Unlimited Social Media</li>
+          <li>✔ SEO management</li>
+          <li>✔ Web Design & Development</li>
+          <li>✔ Dedicated manager</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="relative bg-[#2f6f64] py-32 overflow-hidden">
+
+  <div class="max-w-4xl mx-auto px-8 text-center relative z-10">
+
+    <!-- Quote Icon -->
+    <div class="w-12 h-12 bg-[#0b1f1b] text-[#f7d67b] rounded-full flex items-center justify-center mx-auto mb-8 text-2xl">
+      “
+    </div>
+
+    <!-- Testimonial Text -->
+    <p class="text-white text-lg md:text-xl leading-relaxed mb-10">
+      Best company! We felt very confident hiring Stackly. Their process was simple
+      and the results exceeded expectations. Our growth has increased significantly.
+    </p>
+
+    <!-- User -->
+    <div class="flex flex-col items-center gap-2">
+      <img src="https://picsum.photos/80?1" class="w-16 h-16 rounded-full border-4 border-white/20">
+      <h4 class="font-semibold text-white">William Smith</h4>
+      <p class="text-sm text-gray-200">Web Designer</p>
+
+      <!-- Stars -->
+      <div class="flex gap-1 mt-2 text-[#f7d67b]">
+        ★ ★ ★ ★ ★
+      </div>
+      <p class="text-xs text-gray-200 mt-1">Excellent Job · Trustpilot</p>
+    </div>
+  </div>
+
+  <!-- Floating Avatars -->
+  <img src="https://picsum.photos/50?2" class="absolute top-16 left-20 w-12 h-12 rounded-full opacity-70">
+  <img src="https://picsum.photos/50?3" class="absolute top-24 right-32 w-12 h-12 rounded-full opacity-70">
+  <img src="https://picsum.photos/50?4" class="absolute bottom-20 left-32 w-12 h-12 rounded-full opacity-70">
+  <img src="https://picsum.photos/50?5" class="absolute bottom-24 right-20 w-12 h-12 rounded-full opacity-70">
+
+  <!-- Navigation Arrows (visual only) -->
+  <button class="absolute left-10 top-1/2 -translate-y-1/2 text-white/70 text-2xl">
+    ‹
+  </button>
+  <button class="absolute right-10 top-1/2 -translate-y-1/2 text-white/70 text-2xl">
+    ›
+  </button>
+
+</section>
+
+<!-- BLOG / NEWS -->
+<section class="bg-[#0b1f1b] py-32">
+  <div class="max-w-7xl mx-auto px-8">
+
+    <!-- Header -->
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-6">
+      <div>
+        <span class="inline-block bg-[#1f3b35]/80 text-[#f7d67b] px-4 py-2 rounded-full text-sm mb-4">
+          View Plan
+        </span>
+        <h2 class="text-4xl md:text-5xl font-bold">
+          View Our Pricing Plan And <br>
+          Start Your Project
+        </h2>
+      </div>
+
+      <button class="bg-[#f7d67b] text-black px-6 py-3 rounded-xl font-semibold hover:scale-105 transition">
+        View All News →
+      </button>
+    </div>
+
+    <!-- Blog Grid -->
+    <div class="grid md:grid-cols-3 gap-10">
+
+      <!-- Blog Card 1 -->
+      <div class="bg-[#142e29] rounded-2xl overflow-hidden hover:-translate-y-2 transition">
+        <img src="https://picsum.photos/500/300?code" class="w-full h-[220px] object-cover">
+        <div class="p-6">
+          <div class="flex items-center gap-4 text-xs text-gray-400 mb-3">
+            <span>👤 kulan_wp</span>
+            <span>📅 30 Jan 2026</span>
+          </div>
+          <h3 class="text-lg font-semibold mb-3">
+            How can you start your business for your next generation
+          </h3>
+          <p class="text-gray-400 text-sm mb-4">
+            Digital marketing agencies run paid advertising campaigns for themselves.
+          </p>
+          <a href="#" class="text-[#f7d67b] text-sm font-semibold">
+            More Details →
+          </a>
+        </div>
+      </div>
+
+      <!-- Blog Card 2 -->
+      <div class="bg-[#142e29] rounded-2xl overflow-hidden hover:-translate-y-2 transition">
+        <img src="https://picsum.photos/500/300?headphones" class="w-full h-[220px] object-cover">
+        <div class="p-6">
+          <div class="flex items-center gap-4 text-xs text-gray-400 mb-3">
+            <span>👤 kulan_wp</span>
+            <span>📅 30 Jan 2026</span>
+          </div>
+          <h3 class="text-lg font-semibold mb-3">
+            Unleashing Intelligent Digital Marketing Solutions
+          </h3>
+          <p class="text-gray-400 text-sm mb-4">
+            Digital marketing agencies run paid advertising campaigns for themselves.
+          </p>
+          <a href="#" class="text-[#f7d67b] text-sm font-semibold">
+            More Details →
+          </a>
+        </div>
+      </div>
+
+      <!-- Blog Card 3 -->
+      <div class="bg-[#142e29] rounded-2xl overflow-hidden hover:-translate-y-2 transition">
+        <img src="https://picsum.photos/500/300?laptop" class="w-full h-[220px] object-cover">
+        <div class="p-6">
+          <div class="flex items-center gap-4 text-xs text-gray-400 mb-3">
+            <span>👤 kulan_wp</span>
+            <span>📅 30 Jan 2026</span>
+          </div>
+          <h3 class="text-lg font-semibold mb-3">
+            Precision Strategies for Modern Digital Branding
+          </h3>
+          <p class="text-gray-400 text-sm mb-4">
+            Digital marketing agencies run paid advertising campaigns for themselves.
+          </p>
+          <a href="#" class="text-[#f7d67b] text-sm font-semibold">
+            More Details →
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-[#1a2b28] text-gray-300 pt-28 pb-10">
+  <div class="max-w-7xl mx-auto px-8">
+
+    <!-- Top Logo Row -->
+    <div class="flex justify-between items-center mb-16">
+      <div class="flex items-center gap-3">
+        <img src="assets/images/logo/stackly_logo.webp" class="h-8">
+      </div>
+
+      <div class="flex gap-4">
+        <a href="#" class="group w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center
+           hover:bg-[#1877f2] hover:border-[#1877f2]
+           hover:shadow-[0_0_20px_rgba(24,119,242,0.5)] transition-all">
+          <i class="fa-brands fa-facebook-f group-hover:scale-110 transition-transform"></i>
+        </a>
+
+        <a href="#" class="group w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center
+           hover:bg-black hover:border-white/20
+           hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all">
+          <i class="fa-brands fa-x-twitter group-hover:scale-110 transition-transform"></i>
+        </a>
+
+        <a href="#" class="group w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center
+           hover:bg-[#e4405f] hover:border-[#e4405f]
+           hover:shadow-[0_0_20px_rgba(228,64,95,0.5)] transition-all">
+          <i class="fa-brands fa-instagram group-hover:scale-110 transition-transform"></i>
+        </a>
+
+        <a href="#" class="group w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center
+           hover:bg-[#0a66c2] hover:border-[#0a66c2]
+           hover:shadow-[0_0_20px_rgba(10,102,194,0.5)] transition-all">
+          <i class="fa-brands fa-linkedin-in group-hover:scale-110 transition-transform"></i>
+        </a>
+      </div>
+    </div> <!-- ✅ THIS WAS MISSING -->
+
+    <!-- Main Footer Grid -->
+    <div class="grid md:grid-cols-4 gap-16 border-t border-white/10 pt-16">
+      
+      <!-- Newsletter -->
+      <div>
+        <h4 class="text-white font-semibold mb-4">Newsletter</h4>
+        <p class="text-sm mb-4">
+          Subscribe to get latest digital marketing tips and updates.
+        </p>
+        <div class="flex">
+          <input type="email" placeholder="Enter your email"
+            class="bg-[#0b1f1b] px-4 py-3 rounded-l-xl w-full text-sm outline-none">
+          <button class="bg-[#f7d67b] text-black px-6 rounded-r-xl font-semibold">
+            Subscribe
+          </button>
+        </div>
+      </div>
+
+      <!-- About -->
+      <div>
+        <h4 class="text-white font-semibold mb-4">About Us</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="#" class="hover:text-[#f7d67b]">Contact Us</a></li>
+          <li><a href="#" class="hover:text-[#f7d67b]">About Us</a></li>
+          <li><a href="#" class="hover:text-[#f7d67b]">Top Projects</a></li>
+          <li><a href="#" class="hover:text-[#f7d67b]">Web Development</a></li>
+          <li><a href="#" class="hover:text-[#f7d67b]">Digital Products</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h4 class="text-white font-semibold mb-4">Our Services</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="#" class="hover:text-[#f7d67b]">Marketing Strategy</a></li>
+          <li><a href="#" class="hover:text-[#f7d67b]">Marketing Analysis</a></li>
+          <li><a href="#" class="hover:text-[#f7d67b]">Web Development</a></li>
+          <li><a href="#" class="hover:text-[#f7d67b]">Business Strategy</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h4 class="text-white font-semibold mb-4">Our Contact</h4>
+        <ul class="space-y-3 text-sm">
+          <li>📧 hello@stackly.com</li>
+          <li>📞 +91 90000 00000</li>
+          <li>⏰ Mon – Fri: 10:00 – 18:00</li>
+          <li>📍 Chennai, India</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-t border-white/10 mt-16 pt-6 text-center text-sm text-gray-400">
+      © Copyright All Rights Reserved by <span class="text-[#f7d67b]">Stackly</span>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const closeMenu = document.getElementById("closeMenu");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("hidden");
+    document.body.classList.add("overflow-hidden");
+  });
+
+  closeMenu.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+    document.body.classList.remove("overflow-hidden");
+  });
+</script>
+
+</body>
+</html>
